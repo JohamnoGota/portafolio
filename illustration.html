@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Grid</title>
     <style>
+
         :root {
             --card_width: 350px;
             --row_increment: 10px;
@@ -108,14 +109,66 @@
         margin-left: 200px; /* Same as the width of the sidenav */
         }
 
+        .lightbox {
+        display: none; /* Initially hidden */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+        }
+
+        .lightbox .prev,
+        .lightbox .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .lightbox .prev {
+            left: 10px;
+        }
+
+        .lightbox .next {
+            right: 10px;
+        }
+
+        .lightbox .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 40px;
+            color: white;
+            cursor: pointer;
+        }
+
+
         /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
         @media screen and (max-height: 450px) {
         .sidenav {padding-top: 15px;}
         .sidenav a {font-size: 18px;}
         }
-    </style>
+    </style> 
 </head>
 <body>
+
+
+
     <div id="mySidenav" class="sidenav">
         
         <a href="landing.html">aLE</a>
@@ -123,14 +176,21 @@
         <a href="animation.html">Animation</a>
         <a href="design.html">Design</a>
         <a href="contact.html">Contact</a>
-      </div>
+    </div>
       
      <!-- Use any element to open the sidenav -->
     <span onclick="openNav()">open</span>
-      
-      
-      <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+
+    <!-- Lightbox -->
+    
     <div id="main">
+        <div class="lightbox" id="lightbox">
+            <span class="close" onclick="closeLightbox()">&times;</span>
+            <span class="prev" onclick="changeImage(-1)">&#10094;</span>
+            <img id="lightbox-img">
+            <span class="next" onclick="changeImage(1)">&#10095;</span>
+        </div>
+        
         <div class="pin_container">
             <div class="card card_medium"><img src="illustrations/5Picture.jpg" alt="Artwork"></div>
             <div class="card card_medium"><img src="illustrations/an.jpg" alt="Artwork"></div>
@@ -164,17 +224,47 @@
             <div class="card card_small"><img src="illustrations/tv_glow_fixed.png" alt="Artwork"></div>
     
         </div>
+
+
+   
+
     </div>
 
+    <script>
+        lightbox.style.display = "none";
+        let images = Array.from(document.querySelectorAll('.card img'));
+        let currentIndex = 0;
 
+        function openLightbox(index) {
+            currentIndex = index;
+            document.getElementById("lightbox-img").src = images[index].src;
+            document.getElementById("lightbox").style.display = "flex";
+        }
+
+        function closeLightbox() {
+            document.getElementById("lightbox").style.display = "none";
+        }
+
+        function changeImage(direction) {
+            currentIndex += direction;
+            if (currentIndex < 0) currentIndex = images.length - 1;
+            if (currentIndex >= images.length) currentIndex = 0;
+            document.getElementById("lightbox-img").src = images[currentIndex].src;
+        }
+
+        images.forEach((img, index) => {
+            img.addEventListener("click", () => openLightbox(index));
+        });
+
+        document.addEventListener("keydown", (e) => {
+            if (document.getElementById("lightbox").style.display === "flex") {
+                if (e.key === "ArrowLeft") changeImage(-1);
+                if (e.key === "ArrowRight") changeImage(1);
+                if (e.key === "Escape") closeLightbox();
+            }
+        });
+    </script>
+
+    
 </body>
 </html>
-
-
-const images = [
-            { src: "illustrations/an.jpg", description: "Description of Image 1" },
-            { src: "illustrations/Betto.png", description: "Description of Image 2" },
-            { src: "illustrations/Chairs.png", description: "Description of Image 3" },
-            { src: "illustrations/tv_glow_fixed.png", description: "Description of Image 4" },
-            { src: "illustrations/literally_me.png", description: "Description of Image 5" }
-        ];
