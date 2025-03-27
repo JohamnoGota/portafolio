@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Grid</title>
+    <style>
+        :root {
+            --card_width: 250px;
+            --row_increment: 10px;
+            --card_border_radius: 16px;
+            --card_small: 26;
+            --card_medium: 33;
+            --card_large: 45;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            padding-top: 5px;
+            background-color: black;
+        }
+
+        .pin_container {
+            margin: 0;
+            padding: 0;
+            width: 80vw;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            display: grid;
+            grid-template-columns: repeat(auto-fill, var(--card_width));
+            grid-auto-rows: var(--row_increment);
+            justify-content: center;
+            background-color: black;
+            margin-left: 100px;
+        }
+
+        .card {
+            padding: 0;
+            margin: 15px 10px;
+            border-radius: var(--card_border_radius);
+            background-color: red;
+            overflow: hidden; /* Ensures the border radius applies to images */
+            display: flex;
+        }
+
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the image fills the card without stretching */
+        }
+
+        .card_small {
+            grid-row-end: span var(--card_small);
+        }
+
+        .card_medium {
+            grid-row-end: span var(--card_medium);
+        }
+
+        .card_large {
+            grid-row-end: span var(--card_large);
+        }
+
+        /* The sidenav */
+        .sidenav {
+        height: 100%;
+        width: 200px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        padding-top: 20px;
+        }
+
+
+        /* The navigation menu links */
+        .sidenav a {
+        padding: 20px 20px 8px 48px;
+        text-decoration: none;
+        font-family: "Futura";
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+        }
+
+        /* When you mouse over the navigation links, change their color */
+        .sidenav a:hover {
+        color: #f1f1f1;
+        }
+
+        /* Position and style the close button (top right corner) */
+        .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+        }
+
+        /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+        /* Page content */
+        .main {
+        margin-left: 200px; /* Same as the width of the sidenav */
+        }
+
+        /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+        @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+        }
+    </style>
+</head>
+<body>
+    <div id="mySidenav" class="sidenav">
+        
+        <a href="landing.html">aLE</a>
+        <a href="illustration.html">Illustration</a>
+        <a href="animation.html">Animation</a>
+        <a href="design.html">Design</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      
+     <!-- Use any element to open the sidenav -->
+    <span onclick="openNav()">open</span>
+      
+      
+      <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+    <div id="main">
+        <div class="pin_container">
+            <div class="card card_small"><img src="illustrations/an.jpg" alt="Artwork"></div>
+            <div class="card card_medium"><img src="illustrations/Betto.png" alt="Artwork"></div>
+            <div class="card card_medium"><img src="illustrations/Chairs.png" alt="Artwork"></div>
+            <div class="card card_large"><img src="illustrations/Finalgirl.png" alt="Artwork"></div>
+            <div class="card card_medium"><img src="illustrations/gatoCool.png" alt="Artwork"></div>
+            <div class="card card_medium"><img src="illustrations/hayloft_I.png" alt="Artwork"></div>
+            <div class="card card_large"><img src="illustrations/hayloft_ii.png" alt="Artwork"></div>
+            <div class="card card_medium"><img src="illustrations/kissing.png" alt="Artwork"></div>
+            <div class="card card_small"><img src="illustrations/literally_me.png" alt="Artwork"></div>
+            <div class="card card_medium"><img src="illustrations/mika_&_moonchild_filter.png" alt="Artwork"></div>
+            <div class="card card_large"><img src="illustrations/tv_glow_fixed.png" alt="Artwork"></div>
+    
+        </div>
+    </div>
+
+
+</body>
+</html>
+
+
+const images = [
+            { src: "illustrations/an.jpg", description: "Description of Image 1" },
+            { src: "illustrations/Betto.png", description: "Description of Image 2" },
+            { src: "illustrations/Chairs.png", description: "Description of Image 3" },
+            { src: "illustrations/tv_glow_fixed.png", description: "Description of Image 4" },
+            { src: "illustrations/literally_me.png", description: "Description of Image 5" }
+        ];
