@@ -1,0 +1,11 @@
+<div class="card card_small"><img src="illustrations/an.jpg" alt="Artwork"></div>
+<div class="card card_medium"><img src="illustrations/Betto.png" alt="Artwork"></div>
+<div class="card card_medium"><img src="illustrations/Chairs.png" alt="Artwork"></div>
+<div class="card card_large"><img src="illustrations/Finalgirl.png" alt="Artwork"></div>
+<div class="card card_medium"><img src="illustrations/gatoCool.png" alt="Artwork"></div>
+<div class="card card_medium"><img src="illustrations/hayloft_I.png" alt="Artwork"></div>
+<div class="card card_large"><img src="illustrations/hayloft_ii.png" alt="Artwork"></div>
+<div class="card card_medium"><img src="illustrations/kissing.png" alt="Artwork"></div>
+<div class="card card_small"><img src="illustrations/literally_me.png" alt="Artwork"></div>
+<div class="card card_medium"><img src="illustrations/mika_&_moonchild_filter.png" alt="Artwork"></div>
+<div class="card card_large"><img src="illustrations/tv_glow_fixed.png" alt="Artwork"></div>
