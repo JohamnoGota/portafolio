@@ -76,7 +76,7 @@
         /* Main Media (Image or Video) */
         .main-media {
             width: 550px;
-            height: 350px;
+            height: 450px;
             border-radius: var(--card_border_radius);
             overflow: hidden;
         }
@@ -85,7 +85,7 @@
         .main-media video {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
             border-radius: var(--card_border_radius);
         }
 
@@ -103,7 +103,7 @@
         }
 
         .small-image {
-            width: 150px;
+            width: auto;
             height: 150px;
             border-radius: var(--card_border_radius);
         }
@@ -121,43 +121,99 @@
     </div>
 
     <div class="main">
-        <div class="gallery-container">
+
+             <!-- Group 1: Image -->
+            <div class="gallery-group">
+                <div class="main-media">
+                    <img src="3d/Itto.png" alt="Artwork"  >
+                </div>
+                <div class="gallery-description">   </div>
+                <div class="small-images">
+                    <img class="small-image" src="3d/cabeza_itto.png" alt="Artwork">
+                    <img class="small-image" src="3d/itto_pantalon.png" alt="Artwork">
+                    
+                </div>
+            </div>
+
             <!-- Group 1: Image -->
             <div class="gallery-group">
                 <div class="main-media">
-                    <img src="illustrations/an.jpg" alt="Artwork">
+                    <img src="3d/horchata.png" alt="Artwork">
                 </div>
-                <div class="gallery-description">Description of Image 1</div>
+                <div class="gallery-description">  </div>
                 <div class="small-images">
-                    <img class="small-image" src="illustrations/Betto.png" alt="Artwork">
-                    <img class="small-image" src="illustrations/Chairs.png" alt="Artwork">
+                    <img class="small-image" src="3d/cabeza_horchata.png" alt="Artwork">
+                    <img class="small-image" src="3d/horchata_patas.png" alt="Artwork">
+                    <img class="small-image" src="3d/capa_horchata.png" alt="Artwork">
+                    <img class="small-image" src="3d/horchata_ojos.png" alt="Artwork">
+                    
+                </div>
+            </div>
+
+
+            <!-- Group 3: Image -->
+            <div class="gallery-group">
+                <div class="main-media">
+                    <img src="3d/mugi_ca.png" alt="Artwork">
+                </div>
+                <div class="gallery-description">   </div>
+                <div class="small-images">
+                    <img class="small-image" src="3d/mugui_back.png" alt="Artwork">
+                    <img class="small-image" src="3d/mugi.png" alt="Artwork">
                 </div>
             </div>
 
             <!-- Group 2: Video -->
             <div class="gallery-group">
                 <div class="main-media">
-                    <video src="3d/AlejandraGT_final.mp4" controls muted loop></video>
+                    <video src="videos/AlejandraGT_final.mp4" controls muted loop></video>
                 </div>
-                <div class="gallery-description">Description of Video 1</div>
-                <div class="small-images">
-                    <img class="small-image" src="illustrations/gatoCool.png" alt="Artwork">
-                    <img class="small-image" src="illustrations/hayloft_I.png" alt="Artwork">
-                </div>
-            </div>
+                <div class="gallery-description">   </div>
 
-            <!-- Group 3: Image -->
+                <!-- Group 2: Video -->
             <div class="gallery-group">
                 <div class="main-media">
-                    <img src="illustrations/hayloft_ii.png" alt="Artwork">
+                    <video src="videos/metro_vfx.MP4" controls muted loop></video>
                 </div>
-                <div class="gallery-description">Description of Image 3</div>
-                <div class="small-images">
-                    <img class="small-image" src="illustrations/kissing.png" alt="Artwork">
-                    <img class="small-image" src="illustrations/literally_me.png" alt="Artwork">
+                <div class="gallery-description">   </div>
+              
+                
+            
+
+            <!-- Group 2: Video -->
+            <div class="gallery-group">
+                <div class="main-media">
+                    <video src="videos/door_vfx.MP4" controls muted loop></video>
                 </div>
-            </div>
-        </div>
+                <div class="gallery-description">   </div>
+              
+                
+
+            <!-- Group 2: Video -->
+            <div class="gallery-group">
+                <div class="main-media">
+                    <video src="videos/slide_vfx.MP4" controls muted loop></video>
+                </div>
+                <div class="gallery-description">   </div>
+              
+                </div>
+            
+              
+            
+            
+
+            <!-- Group 2: Video -->
+            <div class="gallery-group">
+                <div class="main-media">
+                    <video src="videos/park_vfx.MP4" controls muted loop></video>
+                </div>
+                <div class="gallery-description">   </div>
+              
+                </div>
+            
+
+
+
     </div>
 </body>
 </html>

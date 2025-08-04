@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Design</title>
+    <title>Image Gallery</title>
     <style>
         :root {
             --card_border_radius: 16px;
@@ -31,17 +31,22 @@
         }
 
         .sidenav a {
-            padding: 20px 20px 8px 48px;
-            text-decoration: none;
-            font-size: 25px;
-            font-family: "Futura";
-            color: #818181;
-            display: block;
-            transition: 0.3s;
+        padding: 20px 20px 8px 48px;
+        text-decoration: none;
+        font-family: "Futura";
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
         }
 
         .sidenav a:hover {
             color: #f1f1f1;
+        }
+
+        .main {
+            margin-left: 220px;
+            padding: 20px;
         }
 
         .box-menu{
@@ -51,10 +56,6 @@
             margin-left: 40px;
         }
 
-        .main {
-            margin-left: 220px;
-            padding: 20px;
-        }
 
         /* Scrollable Vertical Gallery */
         .gallery-container {
@@ -84,6 +85,15 @@
             height: 350px;
         }
 
+        .main-image-long {
+            width: 550px;
+            height: auto;
+        }
+
+        .main-image-square {
+            width: 550px;
+            height: auto;
+        }
         .small-images {
             display: flex;
             justify-content: center;
@@ -95,16 +105,17 @@
             height: 150px;
         }
 
+        .small-image-long {
+            width: 70px;
+            height: auto;
+        }
+
         .gallery-description {
+            padding: 5px;
+            font-size: large;
             text-align: center;
             margin-top: 8px;
             font-size: 16px;
-        }
-        
-        /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-       @media screen and (max-height: 450px) {
-        .sidenav {padding-top: 15px;}
-        .sidenav a {font-size: 18px;}
         }
     </style>
 </head>
@@ -119,32 +130,64 @@
         <div class="box-menu"> <img src="menu/walking.gif" height="190px" width="auto"> </div>
     </div>
 
-    <div class="main">
-        <div class="gallery-container">
             <div class="gallery-group">
-                <img class="main-image" src="illustrations/an.jpg" alt="Artwork">
-                <div class="gallery-description">Description of Image 1</div>
+                <img class="main-image" src="low_res_designs/CALENDARIO_1.JPG" alt="Artwork">
                 <div class="small-images">
-                    <img class="small-image" src="illustrations/Betto.png" alt="Artwork">
-                    <img class="small-image" src="illustrations/Chairs.png" alt="Artwork">
+                    <img class="small-image" src="low_res_designs/CALENDARIO_2.JPG" alt="Artwork">
+                    <img class="small-image" src="low_res_designs/CALENDARIO_3.JPG" alt="Artwork">
+                    <img class="small-image" src="low_res_designs/CALENDARIO_4.JPG" alt="Artwork">
+                    <img class="small-image-long" src="low_res_designs/CALENDARIO_5.png" alt="Artwork">
                 </div>
+                <div class="gallery-description"><h3>Colaboración de diseño e ilustración de calendario</h3></div>
             </div>
 
             <div class="gallery-group">
-                <img class="main-image" src="illustrations/Finalgirl.png" alt="Artwork">
-                <div class="gallery-description">Description of Image 2</div>
+                <img class="main-image" src="low_res_designs/Kaito_3.jpg" alt="Artwork">
                 <div class="small-images">
-                    <img class="small-image" src="illustrations/gatoCool.png" alt="Artwork">
-                    <img class="small-image" src="illustrations/hayloft_I.png" alt="Artwork">
+                    <img class="small-image-long" src="low_res_designs/Kaito_1.png" alt="Artwork">
+                    <img class="small-image" src="low_res_designs/Kaito_4.jpg" alt="Artwork">
+                    <img class="small-image" src="low_res_designs/kaito_5.jpg" alt="Artwork">
+                    <img class="small-image" src="low_res_designs/Kaito_6.jpg" alt="Artwork">
+                    <img class="small-image" src="low_res_designs/kaito_7.jpg" alt="Artwork">
                 </div>
+                <div class="gallery-description"><h3>Año de marca de libretas</h3></div>
             </div>
             <div class="gallery-group">
-                <img class="main-image" src="illustrations/hayloft_ii.png" alt="Artwork">
-                <div class="gallery-description">Description of Image 3</div>
+                <img class="main-image-long" src="low_res_designs/Solovino_2.png" alt="Artwork">
                 <div class="small-images">
-                    <img class="small-image" src="illustrations/kissing.png" alt="Artwork">
-                    <img class="small-image" src="illustrations/literally_me.png" alt="Artwork">
+                    <img class="small-image" src="low_res_designs/Solovino_1.png" alt="Artwork">
+                    <img class="small-image" src="low_res_designs/Solovino.jpg" alt="Artwork">
                 </div>
+                <div class="gallery-description"><h3>Año de marca para revista con mascota</h3></div>
+            </div>
+
+            <div class="gallery-group">
+                <img class="main-image-long" src="libreta/punto_cruz.png" alt="Artwork">
+                <div class="small-images">
+                    <img class="small-image" src="libreta/venado.png" alt="Artwork">
+                    <img class="small-image" src="libreta/gato_rana.jpg" alt="Artwork">
+                </div>
+                <div class="gallery-description"><h3>Diseño y encuadernación de libretas</h3></div>
+            </div>
+
+            <div class="gallery-group">
+                <img class="main-image" src="low_res_designs/psichofamich_1.png" alt="Artwork">
+                <div class="small-images">
+                    <img class="small-image" src="low_res_designs/Psicofamich_2.png" alt="Artwork">
+                    <img class="small-image" src="low_res_designs/Psicofamich_3.jpg" alt="Artwork">
+                </div>
+                <div class="gallery-description"><h3>Diseño de identidad</h3></div>
+            </div>
+
+
+            <div class="gallery-group">
+                <img class="main-image-square" src="low_res_designs/Shanti_1.png" alt="Artwork">
+                <div class="small-images">
+                    <img class="small-image" src="low_res_designs/Shanti_2.png" alt="Artwork">
+                    <img class="small-image" src="low_res_designs/Shanti_4.png" alt="Artwork">
+                    <img class="small-image" src="low_res_designs/Shanti_3.png" alt="Artwork">
+                </div>
+                <div class="gallery-description"><h3>Diseño de identidad</h3></div>
             </div>
         </div>
     </div>
